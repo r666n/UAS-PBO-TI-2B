@@ -60,6 +60,7 @@ public class FormProduk extends javax.swing.JFrame {
         btninsert = new javax.swing.JButton();
         btnupdate = new javax.swing.JButton();
         btndelete = new javax.swing.JButton();
+        btnabout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +92,9 @@ public class FormProduk extends javax.swing.JFrame {
         btndelete.setText("Delete");
         btndelete.addActionListener(this::btndeleteActionPerformed);
 
+        btnabout.setText("About");
+        btnabout.addActionListener(this::btnaboutActionPerformed);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,6 +106,8 @@ public class FormProduk extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnabout)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnkategori)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -120,7 +126,8 @@ public class FormProduk extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnkategori)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(btnabout))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -396,6 +403,30 @@ public class FormProduk extends javax.swing.JFrame {
     updateDialog.setVisible(true);
     }//GEN-LAST:event_btnupdateActionPerformed
 
+    private void btnaboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaboutActionPerformed
+          // Create a formatted string with team member information
+    StringBuilder aboutText = new StringBuilder();
+    aboutText.append("=== TEAM PRODUK MANAGEMENT SYSTEM ===\n\n");
+    aboutText.append("Daftar Anggota Tim:\n\n");
+    aboutText.append("1. Rendra Adnan Farid     (25104410036) - Project Lead & Tester & Documentation & Backend Developer\n");
+    aboutText.append("2. M. Rizki Desca F.      (25104410041) - Database Developer & DAO\n");
+    aboutText.append("3. Ema Netasari           (25104410052) - Frontend Developer (GUI)\n");
+    aboutText.append("4. Nahrul Mubarok         (25104410062) - Backend Developer\n");
+    aboutText.append("5. Gladis Ayu Diapitaloka (25104410073) - UI/UX Design & Documentation\n");
+    aboutText.append("6. Adelia Wahyu Bima Sakti (25104410094) - Frontend Developer (GUI)\n\n");
+    aboutText.append("=== Aplikasi Manajemen Produk ===\n");
+    aboutText.append("Versi 1.0\n");
+    aboutText.append("© 2026 - All Rights Reserved");
+    
+    // Display the information in a dialog
+    JOptionPane.showMessageDialog(
+        this, 
+        aboutText.toString(), 
+        "Tentang Aplikasi", 
+        JOptionPane.INFORMATION_MESSAGE
+    );
+    }//GEN-LAST:event_btnaboutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -422,6 +453,7 @@ public class FormProduk extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnabout;
     private javax.swing.JButton btndelete;
     private javax.swing.JButton btninsert;
     private javax.swing.JButton btnkategori;
