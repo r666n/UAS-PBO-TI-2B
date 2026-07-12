@@ -404,24 +404,27 @@ public class FormProduk extends javax.swing.JFrame {
     }//GEN-LAST:event_btnupdateActionPerformed
 
     private void btnaboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaboutActionPerformed
-          // Create a formatted string with team member information
-    StringBuilder aboutText = new StringBuilder();
-    aboutText.append("=== TEAM PRODUK MANAGEMENT SYSTEM ===\n\n");
-    aboutText.append("Daftar Anggota Tim:\n\n");
-    aboutText.append("1. Rendra Adnan Farid     (25104410036) - Project Lead & Tester & Documentation & Backend Developer\n");
-    aboutText.append("2. M. Rizki Desca F.      (25104410041) - Database Developer & DAO\n");
-    aboutText.append("3. Ema Netasari           (25104410052) - Frontend Developer (GUI)\n");
-    aboutText.append("4. Nahrul Mubarok         (25104410062) - Backend Developer\n");
-    aboutText.append("5. Gladis Ayu Diapitaloka (25104410073) - UI/UX Design & Documentation\n");
-    aboutText.append("6. Adelia Wahyu Bima Sakti (25104410094) - Frontend Developer (GUI)\n\n");
-    aboutText.append("=== Aplikasi Manajemen Produk ===\n");
-    aboutText.append("Versi 1.0\n");
-    aboutText.append("© 2026 - All Rights Reserved");
+       // Create HTML with table for perfect alignment
+    String aboutText = "<html>"
+        + "<body style='font-family: Courier New, monospace; padding: 5px;'>"
+        + "<b>=== TEAM PRODUK MANAGEMENT SYSTEM ===</b><br>"
+        + "====================================<br><br>"
+        + "Daftar Anggota Tim:<br><br>"
+        + "<table style='font-family: Courier New, monospace; border-collapse: collapse;'>"
+        + "<tr><td>1.</td><td>Rendra Adnan Farid</td><td style='padding-left: 20px;'>(25104410036)</td></tr>"
+        + "<tr><td>2.</td><td>M. Rizki Desca F.</td><td style='padding-left: 20px;'>(25104410041)</td></tr>"
+        + "<tr><td>3.</td><td>Ema Netasari</td><td style='padding-left: 20px;'>(25104410052)</td></tr>"
+        + "<tr><td>4.</td><td>Nahrul Mubarok</td><td style='padding-left: 20px;'>(25104410062)</td></tr>"
+        + "<tr><td>5.</td><td>Gladis Ayu Diapitaloka</td><td style='padding-left: 20px;'>(25104410073)</td></tr>"
+        + "<tr><td>6.</td><td>Adelia Wahyu Bima Sakti</td><td style='padding-left: 20px;'>(25104410094)</td></tr>"
+        + "</table>"
+        + "</body>"
+        + "</html>";
     
     // Display the information in a dialog
     JOptionPane.showMessageDialog(
         this, 
-        aboutText.toString(), 
+        aboutText, 
         "Tentang Aplikasi", 
         JOptionPane.INFORMATION_MESSAGE
     );
